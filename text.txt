@@ -1,2 +1,4 @@
 API_TOKEN = "*******"
 ADMIN_CHAT_ID = "-*******"
+
+python 3.10<

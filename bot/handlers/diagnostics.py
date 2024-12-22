@@ -1,6 +1,6 @@
 from aiogram import types
 from aiogram import Dispatcher
-from bot.config import logging
+import logging
 
 
 async def diagnostic_handler(message: types.Message):

@@ -6,7 +6,6 @@ import logging  # Імпортуємо logging напряму
 from bot.config import ADMIN_CHAT_ID  # Імпортуємо лише ADMIN_CHAT_ID із config
 
 
-
 async def apply_handler(message: types.Message):
     """Обробка вибору «Подати заявку на обмін студентів»."""
     kb = [
