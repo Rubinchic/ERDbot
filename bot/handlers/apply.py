@@ -27,8 +27,8 @@ async def collect_data(message: types.Message):
     if step == 'faculty':
         user_data[user_id]['faculty'] = message.text
         kb = [
-            [KeyboardButton(text="1 курс"), KeyboardButton(text="2 курс")],
-            [KeyboardButton(text="3 курс"), KeyboardButton(text="4 курс")]
+            [KeyboardButton(text="2 курс"), KeyboardButton(text="3 курс")],
+            [KeyboardButton(text="4 курс")]
         ]
         keyboard = ReplyKeyboardMarkup(keyboard=kb, resize_keyboard=True)
         await message.answer('Оберіть номер курсу:', reply_markup=keyboard)
