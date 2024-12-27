@@ -1,9 +1,9 @@
 import asyncio
 from aiogram import Bot, Dispatcher
-from bot.config import API_TOKEN
-from bot.handlers.start import register_handlers_start
-from bot.handlers.apply import register_handlers_apply
-from bot.handlers.question import register_handlers_question
+from config import API_TOKEN
+from handlers.start import register_handlers_start
+from handlers.apply import register_handlers_apply
+from handlers.question import register_handlers_question
 import logging
 from dotenv import load_dotenv  # Підключаємо бібліотеку для роботи з .env
 

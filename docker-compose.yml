@@ -1,0 +1,10 @@
+version: "3.7"
+services:
+  bot:
+    build: .
+    command: python bot/main.py
+    env_file:
+      ./bot/.env
+    environment:
+      - PYTHONPATH=/app
+    restart: always
