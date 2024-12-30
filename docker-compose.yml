@@ -1,7 +1,8 @@
 version: "3.7"
 services:
   bot:
-    build: .
+    build:
+      context: .
     command: python bot/main.py
     env_file:
       ./bot/.env
