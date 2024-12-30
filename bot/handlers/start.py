@@ -1,6 +1,7 @@
 from aiogram import types
 from aiogram import Dispatcher
 from bot.keyboards.defaultkeyboards import OptionKeyboard
+from bot.utils.user_data import clear_user_data
 
 
 async def start_command(message: types.Message):
@@ -12,6 +13,8 @@ async def start_command(message: types.Message):
                          'Здобувачі освіти 2-4 курсів бакалаврату\n'
                          'Необхідний рівень володіння англійською мовою: B2+\n'
                          'Середній бал у рейтингу успішності має бути вищим за 80', reply_markup=OptionKeyboard)
+    user_id = message.chat.id
+    clear_user_data(user_id)
 
 
 def register_handlers_start(dp: Dispatcher):
