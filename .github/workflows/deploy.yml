@@ -22,6 +22,6 @@ jobs:
         key: ${{ secrets.SERVER_SSH_KEY }}
         script: |
           cd /home/valerii/erdbot
-          git pull main
+          git pull
           docker compose down
           docker compose up -d --build
