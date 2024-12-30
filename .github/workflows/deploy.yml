@@ -14,13 +14,14 @@ jobs:
       uses: actions/checkout@v3
 
     - name: Deploy via SSH
-      uses: appleboy/ssh-action@v0.5.4
+      uses: appleboy/ssh-action@v0.1.7
       with:
         host: ${{ secrets.SERVER_HOST }}
+        port: 25
         username: ${{ secrets.SERVER_USER }}
         key: ${{ secrets.SERVER_SSH_KEY }}
         script: |
-          cd /path/to/project
+          cd /home/valerii/erdbot
           git pull origin main
-          docker-compose down
-          docker-compose up -d --build
+          docker compose down
+          docker compose up -d --build
